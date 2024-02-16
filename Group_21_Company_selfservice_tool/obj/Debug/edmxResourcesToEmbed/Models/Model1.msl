@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FDBProjectModelStoreContainer" CdmEntityContainer="FDBProjectEntities3">
+    <EntitySetMapping Name="Admin">
+      <EntityTypeMapping TypeName="FDBProjectModel.Admin">
+        <MappingFragment StoreEntitySet="Admin">
+          <ScalarProperty Name="Admin_ID" ColumnName="Admin_ID" />
+          <ScalarProperty Name="Admin_First_Name" ColumnName="Admin_First_Name" />
+          <ScalarProperty Name="Admin_Last_Name" ColumnName="Admin_Last_Name" />
+          <ScalarProperty Name="Contact_Phone" ColumnName="Contact_Phone" />
+          <ScalarProperty Name="Contact_Mail" ColumnName="Contact_Mail" />
+          <ScalarProperty Name="user" ColumnName="user" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Awards">
+      <EntityTypeMapping TypeName="FDBProjectModel.Awards">
+        <MappingFragment StoreEntitySet="Awards">
+          <ScalarProperty Name="Award_ID" ColumnName="Award_ID" />
+          <ScalarProperty Name="Award_Name" ColumnName="Award_Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Employee_ID" ColumnName="Employee_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Branch">
+      <EntityTypeMapping TypeName="FDBProjectModel.Branch">
+        <MappingFragment StoreEntitySet="Branch">
+          <ScalarProperty Name="Branch_ID" ColumnName="Branch_ID" />
+          <ScalarProperty Name="Branch_Name" ColumnName="Branch_Name" />
+          <ScalarProperty Name="Branch_Location" ColumnName="Branch_Location" />
+          <ScalarProperty Name="No_Of_Buildings" ColumnName="No_Of_Buildings" />
+          <ScalarProperty Name="Zip_Code" ColumnName="Zip_Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Building">
+      <EntityTypeMapping TypeName="FDBProjectModel.Building">
+        <MappingFragment StoreEntitySet="Building">
+          <ScalarProperty Name="Building_ID" ColumnName="Building_ID" />
+          <ScalarProperty Name="Building_Name" ColumnName="Building_Name" />
+          <ScalarProperty Name="No_Of_Floors" ColumnName="No_Of_Floors" />
+          <ScalarProperty Name="No_Of_Rooms" ColumnName="No_Of_Rooms" />
+          <ScalarProperty Name="Branch_ID" ColumnName="Branch_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Client">
+      <EntityTypeMapping TypeName="FDBProjectModel.Client">
+        <MappingFragment StoreEntitySet="Client">
+          <ScalarProperty Name="Client_ID" ColumnName="Client_ID" />
+          <ScalarProperty Name="Client_Name" ColumnName="Client_Name" />
+          <ScalarProperty Name="Client_Email" ColumnName="Client_Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Department">
+      <EntityTypeMapping TypeName="FDBProjectModel.Department">
+        <MappingFragment StoreEntitySet="Department">
+          <ScalarProperty Name="Department_ID" ColumnName="Department_ID" />
+          <ScalarProperty Name="Head" ColumnName="Head" />
+          <ScalarProperty Name="Buddy_System" ColumnName="Buddy_System" />
+          <ScalarProperty Name="Company_News" ColumnName="Company_News" />
+          <ScalarProperty Name="Building_ID" ColumnName="Building_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Device">
+      <EntityTypeMapping TypeName="FDBProjectModel.Device">
+        <MappingFragment StoreEntitySet="Device">
+          <ScalarProperty Name="Device_ID" ColumnName="Device_ID" />
+          <ScalarProperty Name="Device_Name" ColumnName="Device_Name" />
+          <ScalarProperty Name="Device_Type" ColumnName="Device_Type" />
+          <ScalarProperty Name="Date_Taken" ColumnName="Date_Taken" />
+          <ScalarProperty Name="Employee_ID" ColumnName="Employee_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employee">
+      <EntityTypeMapping TypeName="FDBProjectModel.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="Employee_ID" ColumnName="Employee_ID" />
+          <ScalarProperty Name="Employee_First_Name" ColumnName="Employee_First_Name" />
+          <ScalarProperty Name="Employee_Last_Name" ColumnName="Employee_Last_Name" />
+          <ScalarProperty Name="Designation_ID" ColumnName="Designation_ID" />
+          <ScalarProperty Name="Company_Email" ColumnName="Company_Email" />
+          <ScalarProperty Name="Company_Phone" ColumnName="Company_Phone" />
+          <ScalarProperty Name="Employee_Start_Date" ColumnName="Employee_Start_Date" />
+          <ScalarProperty Name="Mode_ID" ColumnName="Mode_ID" />
+          <ScalarProperty Name="Project_ID" ColumnName="Project_ID" />
+          <ScalarProperty Name="Role_ID" ColumnName="Role_ID" />
+          <ScalarProperty Name="MealPlan_ID" ColumnName="MealPlan_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KT_Documents">
+      <EntityTypeMapping TypeName="FDBProjectModel.KT_Documents">
+        <MappingFragment StoreEntitySet="KT_Documents">
+          <ScalarProperty Name="KT_ID" ColumnName="KT_ID" />
+          <ScalarProperty Name="KT_Name" ColumnName="KT_Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Leaves">
+      <EntityTypeMapping TypeName="FDBProjectModel.Leaves">
+        <MappingFragment StoreEntitySet="Leaves">
+          <ScalarProperty Name="Leave_Balance_ID" ColumnName="Leave_Balance_ID" />
+          <ScalarProperty Name="Leave_Type" ColumnName="Leave_Type" />
+          <ScalarProperty Name="Assigned_Leaves" ColumnName="Assigned_Leaves" />
+          <ScalarProperty Name="Leaves_Taken_In_Month" ColumnName="Leaves_Taken_In_Month" />
+          <ScalarProperty Name="employee" ColumnName="employee" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Meal_Plan">
+      <EntityTypeMapping TypeName="FDBProjectModel.Meal_Plan">
+        <MappingFragment StoreEntitySet="Meal_Plan">
+          <ScalarProperty Name="Meal_Plan_ID" ColumnName="Meal_Plan_ID" />
+          <ScalarProperty Name="Meal_Plan_Name" ColumnName="Meal_Plan_Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Medical_Insurance">
+      <EntityTypeMapping TypeName="FDBProjectModel.Medical_Insurance">
+        <MappingFragment StoreEntitySet="Medical_Insurance">
+          <ScalarProperty Name="Insurance_ID" ColumnName="Insurance_ID" />
+          <ScalarProperty Name="Insurance_Name" ColumnName="Insurance_Name" />
+          <ScalarProperty Name="Insurance_Type" ColumnName="Insurance_Type" />
+          <ScalarProperty Name="Coverage_Limit" ColumnName="Coverage_Limit" />
+          <ScalarProperty Name="Employee" ColumnName="Employee" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Parking">
+      <EntityTypeMapping TypeName="FDBProjectModel.Parking">
+        <MappingFragment StoreEntitySet="Parking">
+          <ScalarProperty Name="Parking_Lot_ID" ColumnName="Parking_Lot_ID" />
+          <ScalarProperty Name="Lot_Capacity" ColumnName="Lot_Capacity" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Employee" ColumnName="Employee" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Payroll">
+      <EntityTypeMapping TypeName="FDBProjectModel.Payroll">
+        <MappingFragment StoreEntitySet="Payroll">
+          <ScalarProperty Name="Payroll_ID" ColumnName="Payroll_ID" />
+          <ScalarProperty Name="Payroll_Type" ColumnName="Payroll_Type" />
+          <ScalarProperty Name="employee" ColumnName="employee" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pension_Account">
+      <EntityTypeMapping TypeName="FDBProjectModel.Pension_Account">
+        <MappingFragment StoreEntitySet="Pension_Account">
+          <ScalarProperty Name="Pension_Account_ID" ColumnName="Pension_Account_ID" />
+          <ScalarProperty Name="Holder_Name" ColumnName="Holder_Name" />
+          <ScalarProperty Name="Nominees" ColumnName="Nominees" />
+          <ScalarProperty Name="employee" ColumnName="employee" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Personal_Profile">
+      <EntityTypeMapping TypeName="FDBProjectModel.Personal_Profile">
+        <MappingFragment StoreEntitySet="Personal_Profile">
+          <ScalarProperty Name="Profile_ID" ColumnName="Profile_ID" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="SSN" ColumnName="SSN" />
+          <ScalarProperty Name="Personal_gmail" ColumnName="Personal_gmail" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="user" ColumnName="user" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Project">
+      <EntityTypeMapping TypeName="FDBProjectModel.Project">
+        <MappingFragment StoreEntitySet="Project">
+          <ScalarProperty Name="Project_ID" ColumnName="Project_ID" />
+          <ScalarProperty Name="Project_Name" ColumnName="Project_Name" />
+          <ScalarProperty Name="Project_Budget" ColumnName="Project_Budget" />
+          <ScalarProperty Name="Project_Members" ColumnName="Project_Members" />
+          <ScalarProperty Name="Project_Start_Date" ColumnName="Project_Start_Date" />
+          <ScalarProperty Name="Project_End_Date" ColumnName="Project_End_Date" />
+          <ScalarProperty Name="Client_ID" ColumnName="Client_ID" />
+          <ScalarProperty Name="Department_ID" ColumnName="Department_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Repository">
+      <EntityTypeMapping TypeName="FDBProjectModel.Repository">
+        <MappingFragment StoreEntitySet="Repository">
+          <ScalarProperty Name="Repository_ID" ColumnName="Repository_ID" />
+          <ScalarProperty Name="Storage_Available" ColumnName="Storage_Available" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Role">
+      <EntityTypeMapping TypeName="FDBProjectModel.Role">
+        <MappingFragment StoreEntitySet="Role">
+          <ScalarProperty Name="Role_ID" ColumnName="Role_ID" />
+          <ScalarProperty Name="Role_Type" ColumnName="Role_Type" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Room">
+      <EntityTypeMapping TypeName="FDBProjectModel.Room">
+        <MappingFragment StoreEntitySet="Room">
+          <ScalarProperty Name="Room_ID" ColumnName="Room_ID" />
+          <ScalarProperty Name="Room_No" ColumnName="Room_No" />
+          <ScalarProperty Name="Room_Capacity" ColumnName="Room_Capacity" />
+          <ScalarProperty Name="Building_ID" ColumnName="Building_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Skillset">
+      <EntityTypeMapping TypeName="FDBProjectModel.Skillset">
+        <MappingFragment StoreEntitySet="Skillset">
+          <ScalarProperty Name="Skill_ID" ColumnName="Skill_ID" />
+          <ScalarProperty Name="Skill_Name" ColumnName="Skill_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Timesheet">
+      <EntityTypeMapping TypeName="FDBProjectModel.Timesheet">
+        <MappingFragment StoreEntitySet="Timesheet">
+          <ScalarProperty Name="Timesheet_ID" ColumnName="Timesheet_ID" />
+          <ScalarProperty Name="Total_Working_Hours_Per_Month" ColumnName="Total_Working_Hours_Per_Month" />
+          <ScalarProperty Name="Week_Number" ColumnName="Week_Number" />
+          <ScalarProperty Name="employee" ColumnName="employee" />
+          <ScalarProperty Name="leave" ColumnName="leave" />
+          <ScalarProperty Name="payroll" ColumnName="payroll" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User">
+      <EntityTypeMapping TypeName="FDBProjectModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Room_ID" ColumnName="Room_ID" />
+          <ScalarProperty Name="employee" ColumnName="employee" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Work_Mode">
+      <EntityTypeMapping TypeName="FDBProjectModel.Work_Mode">
+        <MappingFragment StoreEntitySet="Work_Mode">
+          <ScalarProperty Name="Mode_ID" ColumnName="Mode_ID" />
+          <ScalarProperty Name="Mode_Name" ColumnName="Mode_Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="Emp_2_Ktdoc" TypeName="FDBProjectModel.Emp_2_Ktdoc" StoreEntitySet="Emp_2_Ktdoc">
+      <EndProperty Name="Employee">
+        <ScalarProperty Name="Employee_ID" ColumnName="empid" />
+      </EndProperty>
+      <EndProperty Name="KT_Documents">
+        <ScalarProperty Name="KT_ID" ColumnName="docid" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="Emp_2_Skill" TypeName="FDBProjectModel.Emp_2_Skill" StoreEntitySet="Emp_2_Skill">
+      <EndProperty Name="Employee">
+        <ScalarProperty Name="Employee_ID" ColumnName="empid" />
+      </EndProperty>
+      <EndProperty Name="Skillset">
+        <ScalarProperty Name="Skill_ID" ColumnName="skillid" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

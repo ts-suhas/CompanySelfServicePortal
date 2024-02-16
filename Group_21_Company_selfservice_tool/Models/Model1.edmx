@@ -1,0 +1,1748 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="FDBProjectModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Admin">
+          <Key>
+            <PropertyRef Name="Admin_ID" />
+          </Key>
+          <Property Name="Admin_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Admin_First_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Admin_Last_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Contact_Phone" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Contact_Mail" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="user" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Awards">
+          <Key>
+            <PropertyRef Name="Award_ID" />
+          </Key>
+          <Property Name="Award_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Award_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Employee_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Branch">
+          <Key>
+            <PropertyRef Name="Branch_ID" />
+          </Key>
+          <Property Name="Branch_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Branch_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Branch_Location" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="No_Of_Buildings" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Zip_Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Building">
+          <Key>
+            <PropertyRef Name="Building_ID" />
+          </Key>
+          <Property Name="Building_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Building_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="No_Of_Floors" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="No_Of_Rooms" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Branch_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Client">
+          <Key>
+            <PropertyRef Name="Client_ID" />
+          </Key>
+          <Property Name="Client_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Client_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Client_Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Department">
+          <Key>
+            <PropertyRef Name="Department_ID" />
+          </Key>
+          <Property Name="Department_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Head" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Buddy_System" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Company_News" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Building_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Device">
+          <Key>
+            <PropertyRef Name="Device_ID" />
+          </Key>
+          <Property Name="Device_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Device_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Device_Type" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Date_Taken" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Employee_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Emp_2_Ktdoc">
+          <Key>
+            <PropertyRef Name="empid" />
+            <PropertyRef Name="docid" />
+          </Key>
+          <Property Name="empid" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="docid" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Emp_2_Skill">
+          <Key>
+            <PropertyRef Name="empid" />
+            <PropertyRef Name="skillid" />
+          </Key>
+          <Property Name="empid" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="skillid" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="Employee_ID" />
+          </Key>
+          <Property Name="Employee_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Employee_First_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Employee_Last_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Designation_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Company_Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Company_Phone" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Employee_Start_Date" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Mode_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Project_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Role_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="MealPlan_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="KT_Documents">
+          <Key>
+            <PropertyRef Name="KT_ID" />
+          </Key>
+          <Property Name="KT_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="KT_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Leaves">
+          <Key>
+            <PropertyRef Name="Leave_Balance_ID" />
+          </Key>
+          <Property Name="Leave_Balance_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Leave_Type" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Assigned_Leaves" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Leaves_Taken_In_Month" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="employee" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Meal_Plan">
+          <Key>
+            <PropertyRef Name="Meal_Plan_ID" />
+          </Key>
+          <Property Name="Meal_Plan_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Meal_Plan_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Medical_Insurance">
+          <Key>
+            <PropertyRef Name="Insurance_ID" />
+          </Key>
+          <Property Name="Insurance_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Insurance_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Insurance_Type" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Coverage_Limit" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Employee" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Parking">
+          <Key>
+            <PropertyRef Name="Parking_Lot_ID" />
+          </Key>
+          <Property Name="Parking_Lot_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Lot_Capacity" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Location" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Employee" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Payroll">
+          <Key>
+            <PropertyRef Name="Payroll_ID" />
+          </Key>
+          <Property Name="Payroll_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Payroll_Type" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="employee" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Pension_Account">
+          <Key>
+            <PropertyRef Name="Pension_Account_ID" />
+          </Key>
+          <Property Name="Pension_Account_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Holder_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Nominees" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="employee" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Personal_Profile">
+          <Key>
+            <PropertyRef Name="Profile_ID" />
+          </Key>
+          <Property Name="Profile_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Gender" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="SSN" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Personal_gmail" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="user" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Project">
+          <Key>
+            <PropertyRef Name="Project_ID" />
+          </Key>
+          <Property Name="Project_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Project_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Project_Budget" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Project_Members" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Project_Start_Date" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Project_End_Date" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Client_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Department_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Repository">
+          <Key>
+            <PropertyRef Name="Repository_ID" />
+          </Key>
+          <Property Name="Repository_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Storage_Available" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Department" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="Role_ID" />
+          </Key>
+          <Property Name="Role_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Role_Type" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Room">
+          <Key>
+            <PropertyRef Name="Room_ID" />
+          </Key>
+          <Property Name="Room_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Room_No" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Room_Capacity" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Building_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Skillset">
+          <Key>
+            <PropertyRef Name="Skill_ID" />
+          </Key>
+          <Property Name="Skill_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Skill_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Timesheet">
+          <Key>
+            <PropertyRef Name="Timesheet_ID" />
+          </Key>
+          <Property Name="Timesheet_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Total_Working_Hours_Per_Month" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Week_Number" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="employee" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="leave" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="payroll" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="User_ID" />
+          </Key>
+          <Property Name="User_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Username" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Room_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="employee" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Work_Mode">
+          <Key>
+            <PropertyRef Name="Mode_ID" />
+          </Key>
+          <Property Name="Mode_ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Mode_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Admin_User">
+          <End Role="User" Type="Self.User" Multiplicity="1" />
+          <End Role="Admin" Type="Self.Admin" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="User_ID" />
+            </Principal>
+            <Dependent Role="Admin">
+              <PropertyRef Name="user" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Awards_Employee">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+          <End Role="Awards" Type="Self.Awards" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="Employee_ID" />
+            </Principal>
+            <Dependent Role="Awards">
+              <PropertyRef Name="Employee_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Building_Branch">
+          <End Role="Branch" Type="Self.Branch" Multiplicity="1" />
+          <End Role="Building" Type="Self.Building" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Branch">
+              <PropertyRef Name="Branch_ID" />
+            </Principal>
+            <Dependent Role="Building">
+              <PropertyRef Name="Branch_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Department_Building">
+          <End Role="Building" Type="Self.Building" Multiplicity="1" />
+          <End Role="Department" Type="Self.Department" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Building">
+              <PropertyRef Name="Building_ID" />
+            </Principal>
+            <Dependent Role="Department">
+              <PropertyRef Name="Building_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Device_Employee">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+          <End Role="Device" Type="Self.Device" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="Employee_ID" />
+            </Principal>
+            <Dependent Role="Device">
+              <PropertyRef Name="Employee_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Emp_2_Ktdoc_Employee">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+          <End Role="Emp_2_Ktdoc" Type="Self.Emp_2_Ktdoc" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="Employee_ID" />
+            </Principal>
+            <Dependent Role="Emp_2_Ktdoc">
+              <PropertyRef Name="empid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Emp_2_Ktdoc_KT_Documents">
+          <End Role="KT_Documents" Type="Self.KT_Documents" Multiplicity="1" />
+          <End Role="Emp_2_Ktdoc" Type="Self.Emp_2_Ktdoc" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KT_Documents">
+              <PropertyRef Name="KT_ID" />
+            </Principal>
+            <Dependent Role="Emp_2_Ktdoc">
+              <PropertyRef Name="docid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Emp_2_Skill_Employee">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+          <End Role="Emp_2_Skill" Type="Self.Emp_2_Skill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="Employee_ID" />
+            </Principal>
+            <Dependent Role="Emp_2_Skill">
+              <PropertyRef Name="empid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Emp_2_Skill_Skillset">
+          <End Role="Skillset" Type="Self.Skillset" Multiplicity="1" />
+          <End Role="Emp_2_Skill" Type="Self.Emp_2_Skill" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Skillset">
+              <PropertyRef Name="Skill_ID" />
+            </Principal>
+            <Dependent Role="Emp_2_Skill">
+              <PropertyRef Name="skillid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employee_Meal_Plan">
+          <End Role="Meal_Plan" Type="Self.Meal_Plan" Multiplicity="1" />
+          <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Meal_Plan">
+              <PropertyRef Name="Meal_Plan_ID" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="MealPlan_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employee_Project">
+          <End Role="Project" Type="Self.Project" Multiplicity="1" />
+          <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Project">
+              <PropertyRef Name="Project_ID" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="Project_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employee_Role">
+          <End Role="Role" Type="Self.Role" Multiplicity="1" />
+          <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Role">
+              <PropertyRef Name="Role_ID" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="Role_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employee_Work_Mode">
+          <End Role="Work_Mode" Type="Self.Work_Mode" Multiplicity="1" />
+          <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Work_Mode">
+              <PropertyRef Name="Mode_ID" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="Mode_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Leaves_Employee">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+          <End Role="Leaves" Type="Self.Leaves" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="Employee_ID" />
+            </Principal>
+            <Dependent Role="Leaves">
+              <PropertyRef Name="Leave_Balance_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Medical_Insurance_Employee">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+          <End Role="Medical_Insurance" Type="Self.Medical_Insurance" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="Employee_ID" />
+            </Principal>
+            <Dependent Role="Medical_Insurance">
+              <PropertyRef Name="Employee" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Parking_Employee">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+          <End Role="Parking" Type="Self.Parking" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="Employee_ID" />
+            </Principal>
+            <Dependent Role="Parking">
+              <PropertyRef Name="Employee" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Payroll_Employee">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+          <End Role="Payroll" Type="Self.Payroll" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="Employee_ID" />
+            </Principal>
+            <Dependent Role="Payroll">
+              <PropertyRef Name="employee" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Pension_Account_Employee">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+          <End Role="Pension_Account" Type="Self.Pension_Account" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="Employee_ID" />
+            </Principal>
+            <Dependent Role="Pension_Account">
+              <PropertyRef Name="employee" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Personal_Profile_User">
+          <End Role="User" Type="Self.User" Multiplicity="1" />
+          <End Role="Personal_Profile" Type="Self.Personal_Profile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="User_ID" />
+            </Principal>
+            <Dependent Role="Personal_Profile">
+              <PropertyRef Name="user" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Project_Client">
+          <End Role="Client" Type="Self.Client" Multiplicity="1" />
+          <End Role="Project" Type="Self.Project" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Client">
+              <PropertyRef Name="Client_ID" />
+            </Principal>
+            <Dependent Role="Project">
+              <PropertyRef Name="Client_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Project_Department">
+          <End Role="Department" Type="Self.Department" Multiplicity="1" />
+          <End Role="Project" Type="Self.Project" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Department">
+              <PropertyRef Name="Department_ID" />
+            </Principal>
+            <Dependent Role="Project">
+              <PropertyRef Name="Department_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Repository_Department">
+          <End Role="Department" Type="Self.Department" Multiplicity="1" />
+          <End Role="Repository" Type="Self.Repository" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Department">
+              <PropertyRef Name="Department_ID" />
+            </Principal>
+            <Dependent Role="Repository">
+              <PropertyRef Name="Department" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Room_Building">
+          <End Role="Building" Type="Self.Building" Multiplicity="1" />
+          <End Role="Room" Type="Self.Room" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Building">
+              <PropertyRef Name="Building_ID" />
+            </Principal>
+            <Dependent Role="Room">
+              <PropertyRef Name="Building_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Timesheet_Employee">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+          <End Role="Timesheet" Type="Self.Timesheet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="Employee_ID" />
+            </Principal>
+            <Dependent Role="Timesheet">
+              <PropertyRef Name="employee" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Timesheet_Leaves">
+          <End Role="Leaves" Type="Self.Leaves" Multiplicity="1" />
+          <End Role="Timesheet" Type="Self.Timesheet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Leaves">
+              <PropertyRef Name="Leave_Balance_ID" />
+            </Principal>
+            <Dependent Role="Timesheet">
+              <PropertyRef Name="leave" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Timesheet_Payroll">
+          <End Role="Payroll" Type="Self.Payroll" Multiplicity="1" />
+          <End Role="Timesheet" Type="Self.Timesheet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Payroll">
+              <PropertyRef Name="Payroll_ID" />
+            </Principal>
+            <Dependent Role="Timesheet">
+              <PropertyRef Name="payroll" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_Employee">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+          <End Role="User" Type="Self.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="Employee_ID" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="employee" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_Room">
+          <End Role="Room" Type="Self.Room" Multiplicity="1" />
+          <End Role="User" Type="Self.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Room">
+              <PropertyRef Name="Room_ID" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="Room_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="FDBProjectModelStoreContainer">
+          <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Awards" EntityType="Self.Awards" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Branch" EntityType="Self.Branch" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Building" EntityType="Self.Building" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Client" EntityType="Self.Client" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Department" EntityType="Self.Department" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Device" EntityType="Self.Device" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Emp_2_Ktdoc" EntityType="Self.Emp_2_Ktdoc" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Emp_2_Skill" EntityType="Self.Emp_2_Skill" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="KT_Documents" EntityType="Self.KT_Documents" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Leaves" EntityType="Self.Leaves" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Meal_Plan" EntityType="Self.Meal_Plan" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Medical_Insurance" EntityType="Self.Medical_Insurance" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Parking" EntityType="Self.Parking" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Payroll" EntityType="Self.Payroll" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Pension_Account" EntityType="Self.Pension_Account" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Personal_Profile" EntityType="Self.Personal_Profile" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Project" EntityType="Self.Project" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Repository" EntityType="Self.Repository" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Room" EntityType="Self.Room" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Skillset" EntityType="Self.Skillset" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Timesheet" EntityType="Self.Timesheet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Work_Mode" EntityType="Self.Work_Mode" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Admin_User" Association="Self.FK_Admin_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="Admin" EntitySet="Admin" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Awards_Employee" Association="Self.FK_Awards_Employee">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="Awards" EntitySet="Awards" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Building_Branch" Association="Self.FK_Building_Branch">
+            <End Role="Branch" EntitySet="Branch" />
+            <End Role="Building" EntitySet="Building" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Department_Building" Association="Self.FK_Department_Building">
+            <End Role="Building" EntitySet="Building" />
+            <End Role="Department" EntitySet="Department" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Device_Employee" Association="Self.FK_Device_Employee">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="Device" EntitySet="Device" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Emp_2_Ktdoc_Employee" Association="Self.FK_Emp_2_Ktdoc_Employee">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="Emp_2_Ktdoc" EntitySet="Emp_2_Ktdoc" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Emp_2_Ktdoc_KT_Documents" Association="Self.FK_Emp_2_Ktdoc_KT_Documents">
+            <End Role="KT_Documents" EntitySet="KT_Documents" />
+            <End Role="Emp_2_Ktdoc" EntitySet="Emp_2_Ktdoc" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Emp_2_Skill_Employee" Association="Self.FK_Emp_2_Skill_Employee">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="Emp_2_Skill" EntitySet="Emp_2_Skill" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Emp_2_Skill_Skillset" Association="Self.FK_Emp_2_Skill_Skillset">
+            <End Role="Skillset" EntitySet="Skillset" />
+            <End Role="Emp_2_Skill" EntitySet="Emp_2_Skill" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employee_Meal_Plan" Association="Self.FK_Employee_Meal_Plan">
+            <End Role="Meal_Plan" EntitySet="Meal_Plan" />
+            <End Role="Employee" EntitySet="Employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employee_Project" Association="Self.FK_Employee_Project">
+            <End Role="Project" EntitySet="Project" />
+            <End Role="Employee" EntitySet="Employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employee_Role" Association="Self.FK_Employee_Role">
+            <End Role="Role" EntitySet="Role" />
+            <End Role="Employee" EntitySet="Employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employee_Work_Mode" Association="Self.FK_Employee_Work_Mode">
+            <End Role="Work_Mode" EntitySet="Work_Mode" />
+            <End Role="Employee" EntitySet="Employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Leaves_Employee" Association="Self.FK_Leaves_Employee">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="Leaves" EntitySet="Leaves" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Medical_Insurance_Employee" Association="Self.FK_Medical_Insurance_Employee">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="Medical_Insurance" EntitySet="Medical_Insurance" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Parking_Employee" Association="Self.FK_Parking_Employee">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="Parking" EntitySet="Parking" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Payroll_Employee" Association="Self.FK_Payroll_Employee">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="Payroll" EntitySet="Payroll" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pension_Account_Employee" Association="Self.FK_Pension_Account_Employee">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="Pension_Account" EntitySet="Pension_Account" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Personal_Profile_User" Association="Self.FK_Personal_Profile_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="Personal_Profile" EntitySet="Personal_Profile" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Project_Client" Association="Self.FK_Project_Client">
+            <End Role="Client" EntitySet="Client" />
+            <End Role="Project" EntitySet="Project" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Project_Department" Association="Self.FK_Project_Department">
+            <End Role="Department" EntitySet="Department" />
+            <End Role="Project" EntitySet="Project" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Repository_Department" Association="Self.FK_Repository_Department">
+            <End Role="Department" EntitySet="Department" />
+            <End Role="Repository" EntitySet="Repository" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Room_Building" Association="Self.FK_Room_Building">
+            <End Role="Building" EntitySet="Building" />
+            <End Role="Room" EntitySet="Room" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Timesheet_Employee" Association="Self.FK_Timesheet_Employee">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="Timesheet" EntitySet="Timesheet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Timesheet_Leaves" Association="Self.FK_Timesheet_Leaves">
+            <End Role="Leaves" EntitySet="Leaves" />
+            <End Role="Timesheet" EntitySet="Timesheet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Timesheet_Payroll" Association="Self.FK_Timesheet_Payroll">
+            <End Role="Payroll" EntitySet="Payroll" />
+            <End Role="Timesheet" EntitySet="Timesheet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_Employee" Association="Self.FK_User_Employee">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_Room" Association="Self.FK_User_Room">
+            <End Role="Room" EntitySet="Room" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="FDBProjectModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Admin">
+          <Key>
+            <PropertyRef Name="Admin_ID" />
+          </Key>
+          <Property Name="Admin_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Admin_First_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Admin_Last_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Contact_Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Contact_Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="user" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="User1" Relationship="Self.FK_Admin_User" FromRole="Admin" ToRole="User" />
+        </EntityType>
+        <EntityType Name="Awards">
+          <Key>
+            <PropertyRef Name="Award_ID" />
+          </Key>
+          <Property Name="Award_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Award_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Employee_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Employee" Relationship="Self.FK_Awards_Employee" FromRole="Awards" ToRole="Employee" />
+        </EntityType>
+        <EntityType Name="Branch">
+          <Key>
+            <PropertyRef Name="Branch_ID" />
+          </Key>
+          <Property Name="Branch_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Branch_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Branch_Location" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="No_Of_Buildings" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Zip_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Building" Relationship="Self.FK_Building_Branch" FromRole="Branch" ToRole="Building" />
+        </EntityType>
+        <EntityType Name="Building">
+          <Key>
+            <PropertyRef Name="Building_ID" />
+          </Key>
+          <Property Name="Building_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Building_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="No_Of_Floors" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="No_Of_Rooms" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Branch_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Branch" Relationship="Self.FK_Building_Branch" FromRole="Building" ToRole="Branch" />
+          <NavigationProperty Name="Department" Relationship="Self.FK_Department_Building" FromRole="Building" ToRole="Department" />
+          <NavigationProperty Name="Room" Relationship="Self.FK_Room_Building" FromRole="Building" ToRole="Room" />
+        </EntityType>
+        <EntityType Name="Client">
+          <Key>
+            <PropertyRef Name="Client_ID" />
+          </Key>
+          <Property Name="Client_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Client_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Client_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Project" Relationship="Self.FK_Project_Client" FromRole="Client" ToRole="Project" />
+        </EntityType>
+        <EntityType Name="Department">
+          <Key>
+            <PropertyRef Name="Department_ID" />
+          </Key>
+          <Property Name="Department_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Head" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Buddy_System" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Company_News" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Building_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Building" Relationship="Self.FK_Department_Building" FromRole="Department" ToRole="Building" />
+          <NavigationProperty Name="Project" Relationship="Self.FK_Project_Department" FromRole="Department" ToRole="Project" />
+          <NavigationProperty Name="Repository" Relationship="Self.FK_Repository_Department" FromRole="Department" ToRole="Repository" />
+        </EntityType>
+        <EntityType Name="Device">
+          <Key>
+            <PropertyRef Name="Device_ID" />
+          </Key>
+          <Property Name="Device_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Device_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Device_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Date_Taken" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Employee_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Employee" Relationship="Self.FK_Device_Employee" FromRole="Device" ToRole="Employee" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="Employee_ID" />
+          </Key>
+          <Property Name="Employee_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Employee_First_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Employee_Last_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Designation_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Company_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Company_Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Employee_Start_Date" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Mode_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Project_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Role_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MealPlan_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Awards" Relationship="Self.FK_Awards_Employee" FromRole="Employee" ToRole="Awards" />
+          <NavigationProperty Name="Device" Relationship="Self.FK_Device_Employee" FromRole="Employee" ToRole="Device" />
+          <NavigationProperty Name="Meal_Plan" Relationship="Self.FK_Employee_Meal_Plan" FromRole="Employee" ToRole="Meal_Plan" />
+          <NavigationProperty Name="Project" Relationship="Self.FK_Employee_Project" FromRole="Employee" ToRole="Project" />
+          <NavigationProperty Name="Role" Relationship="Self.FK_Employee_Role" FromRole="Employee" ToRole="Role" />
+          <NavigationProperty Name="Work_Mode" Relationship="Self.FK_Employee_Work_Mode" FromRole="Employee" ToRole="Work_Mode" />
+          <NavigationProperty Name="Leaves" Relationship="Self.FK_Leaves_Employee" FromRole="Employee" ToRole="Leaves" />
+          <NavigationProperty Name="Medical_Insurance" Relationship="Self.FK_Medical_Insurance_Employee" FromRole="Employee" ToRole="Medical_Insurance" />
+          <NavigationProperty Name="Parking" Relationship="Self.FK_Parking_Employee" FromRole="Employee" ToRole="Parking" />
+          <NavigationProperty Name="Payroll" Relationship="Self.FK_Payroll_Employee" FromRole="Employee" ToRole="Payroll" />
+          <NavigationProperty Name="Pension_Account" Relationship="Self.FK_Pension_Account_Employee" FromRole="Employee" ToRole="Pension_Account" />
+          <NavigationProperty Name="Timesheet" Relationship="Self.FK_Timesheet_Employee" FromRole="Employee" ToRole="Timesheet" />
+          <NavigationProperty Name="User" Relationship="Self.FK_User_Employee" FromRole="Employee" ToRole="User" />
+          <NavigationProperty Name="KT_Documents" Relationship="Self.Emp_2_Ktdoc" FromRole="Employee" ToRole="KT_Documents" />
+          <NavigationProperty Name="Skillset" Relationship="Self.Emp_2_Skill" FromRole="Employee" ToRole="Skillset" />
+        </EntityType>
+        <EntityType Name="KT_Documents">
+          <Key>
+            <PropertyRef Name="KT_ID" />
+          </Key>
+          <Property Name="KT_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="KT_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Employee" Relationship="Self.Emp_2_Ktdoc" FromRole="KT_Documents" ToRole="Employee" />
+        </EntityType>
+        <EntityType Name="Leaves">
+          <Key>
+            <PropertyRef Name="Leave_Balance_ID" />
+          </Key>
+          <Property Name="Leave_Balance_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Leave_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Assigned_Leaves" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Leaves_Taken_In_Month" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="employee" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Employee1" Relationship="Self.FK_Leaves_Employee" FromRole="Leaves" ToRole="Employee" />
+          <NavigationProperty Name="Timesheet" Relationship="Self.FK_Timesheet_Leaves" FromRole="Leaves" ToRole="Timesheet" />
+        </EntityType>
+        <EntityType Name="Meal_Plan">
+          <Key>
+            <PropertyRef Name="Meal_Plan_ID" />
+          </Key>
+          <Property Name="Meal_Plan_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Meal_Plan_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Employee" Relationship="Self.FK_Employee_Meal_Plan" FromRole="Meal_Plan" ToRole="Employee" />
+        </EntityType>
+        <EntityType Name="Medical_Insurance">
+          <Key>
+            <PropertyRef Name="Insurance_ID" />
+          </Key>
+          <Property Name="Insurance_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Insurance_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Insurance_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Coverage_Limit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Employee" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Employee1" Relationship="Self.FK_Medical_Insurance_Employee" FromRole="Medical_Insurance" ToRole="Employee" />
+        </EntityType>
+        <EntityType Name="Parking">
+          <Key>
+            <PropertyRef Name="Parking_Lot_ID" />
+          </Key>
+          <Property Name="Parking_Lot_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Lot_Capacity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Location" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Employee" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Employee1" Relationship="Self.FK_Parking_Employee" FromRole="Parking" ToRole="Employee" />
+        </EntityType>
+        <EntityType Name="Payroll">
+          <Key>
+            <PropertyRef Name="Payroll_ID" />
+          </Key>
+          <Property Name="Payroll_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Payroll_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="employee" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Employee1" Relationship="Self.FK_Payroll_Employee" FromRole="Payroll" ToRole="Employee" />
+          <NavigationProperty Name="Timesheet" Relationship="Self.FK_Timesheet_Payroll" FromRole="Payroll" ToRole="Timesheet" />
+        </EntityType>
+        <EntityType Name="Pension_Account">
+          <Key>
+            <PropertyRef Name="Pension_Account_ID" />
+          </Key>
+          <Property Name="Pension_Account_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Holder_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Nominees" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="employee" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Employee1" Relationship="Self.FK_Pension_Account_Employee" FromRole="Pension_Account" ToRole="Employee" />
+        </EntityType>
+        <EntityType Name="Personal_Profile">
+          <Key>
+            <PropertyRef Name="Profile_ID" />
+          </Key>
+          <Property Name="Profile_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SSN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Personal_gmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="user" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="User1" Relationship="Self.FK_Personal_Profile_User" FromRole="Personal_Profile" ToRole="User" />
+        </EntityType>
+        <EntityType Name="Project">
+          <Key>
+            <PropertyRef Name="Project_ID" />
+          </Key>
+          <Property Name="Project_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Project_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Project_Budget" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Project_Members" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Project_Start_Date" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Project_End_Date" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Client_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Department_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Client" Relationship="Self.FK_Project_Client" FromRole="Project" ToRole="Client" />
+          <NavigationProperty Name="Department" Relationship="Self.FK_Project_Department" FromRole="Project" ToRole="Department" />
+          <NavigationProperty Name="Employee" Relationship="Self.FK_Employee_Project" FromRole="Project" ToRole="Employee" />
+        </EntityType>
+        <EntityType Name="Repository">
+          <Key>
+            <PropertyRef Name="Repository_ID" />
+          </Key>
+          <Property Name="Repository_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Storage_Available" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Department" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Department1" Relationship="Self.FK_Repository_Department" FromRole="Repository" ToRole="Department" />
+        </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="Role_ID" />
+          </Key>
+          <Property Name="Role_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Role_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Employee" Relationship="Self.FK_Employee_Role" FromRole="Role" ToRole="Employee" />
+        </EntityType>
+        <EntityType Name="Room">
+          <Key>
+            <PropertyRef Name="Room_ID" />
+          </Key>
+          <Property Name="Room_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Room_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Room_Capacity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Building_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Building" Relationship="Self.FK_Room_Building" FromRole="Room" ToRole="Building" />
+          <NavigationProperty Name="User" Relationship="Self.FK_User_Room" FromRole="Room" ToRole="User" />
+        </EntityType>
+        <EntityType Name="Skillset">
+          <Key>
+            <PropertyRef Name="Skill_ID" />
+          </Key>
+          <Property Name="Skill_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Skill_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Employee" Relationship="Self.Emp_2_Skill" FromRole="Skillset" ToRole="Employee" />
+        </EntityType>
+        <EntityType Name="Timesheet">
+          <Key>
+            <PropertyRef Name="Timesheet_ID" />
+          </Key>
+          <Property Name="Timesheet_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Total_Working_Hours_Per_Month" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Week_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="employee" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="leave" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="payroll" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Employee1" Relationship="Self.FK_Timesheet_Employee" FromRole="Timesheet" ToRole="Employee" />
+          <NavigationProperty Name="Leaves" Relationship="Self.FK_Timesheet_Leaves" FromRole="Timesheet" ToRole="Leaves" />
+          <NavigationProperty Name="Payroll1" Relationship="Self.FK_Timesheet_Payroll" FromRole="Timesheet" ToRole="Payroll" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="User_ID" />
+          </Key>
+          <Property Name="User_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Room_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="employee" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Admin" Relationship="Self.FK_Admin_User" FromRole="User" ToRole="Admin" />
+          <NavigationProperty Name="Employee1" Relationship="Self.FK_User_Employee" FromRole="User" ToRole="Employee" />
+          <NavigationProperty Name="Personal_Profile" Relationship="Self.FK_Personal_Profile_User" FromRole="User" ToRole="Personal_Profile" />
+          <NavigationProperty Name="Room" Relationship="Self.FK_User_Room" FromRole="User" ToRole="Room" />
+        </EntityType>
+        <EntityType Name="Work_Mode">
+          <Key>
+            <PropertyRef Name="Mode_ID" />
+          </Key>
+          <Property Name="Mode_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Mode_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Employee" Relationship="Self.FK_Employee_Work_Mode" FromRole="Work_Mode" ToRole="Employee" />
+        </EntityType>
+        <Association Name="FK_Admin_User">
+          <End Role="User" Type="Self.User" Multiplicity="1" />
+          <End Role="Admin" Type="Self.Admin" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="User_ID" />
+            </Principal>
+            <Dependent Role="Admin">
+              <PropertyRef Name="user" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Awards_Employee">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+          <End Role="Awards" Type="Self.Awards" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="Employee_ID" />
+            </Principal>
+            <Dependent Role="Awards">
+              <PropertyRef Name="Employee_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Building_Branch">
+          <End Role="Branch" Type="Self.Branch" Multiplicity="1" />
+          <End Role="Building" Type="Self.Building" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Branch">
+              <PropertyRef Name="Branch_ID" />
+            </Principal>
+            <Dependent Role="Building">
+              <PropertyRef Name="Branch_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Department_Building">
+          <End Role="Building" Type="Self.Building" Multiplicity="1" />
+          <End Role="Department" Type="Self.Department" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Building">
+              <PropertyRef Name="Building_ID" />
+            </Principal>
+            <Dependent Role="Department">
+              <PropertyRef Name="Building_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Room_Building">
+          <End Role="Building" Type="Self.Building" Multiplicity="1" />
+          <End Role="Room" Type="Self.Room" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Building">
+              <PropertyRef Name="Building_ID" />
+            </Principal>
+            <Dependent Role="Room">
+              <PropertyRef Name="Building_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Project_Client">
+          <End Role="Client" Type="Self.Client" Multiplicity="1" />
+          <End Role="Project" Type="Self.Project" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Client">
+              <PropertyRef Name="Client_ID" />
+            </Principal>
+            <Dependent Role="Project">
+              <PropertyRef Name="Client_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Project_Department">
+          <End Role="Department" Type="Self.Department" Multiplicity="1" />
+          <End Role="Project" Type="Self.Project" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Department">
+              <PropertyRef Name="Department_ID" />
+            </Principal>
+            <Dependent Role="Project">
+              <PropertyRef Name="Department_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Repository_Department">
+          <End Role="Department" Type="Self.Department" Multiplicity="1" />
+          <End Role="Repository" Type="Self.Repository" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Department">
+              <PropertyRef Name="Department_ID" />
+            </Principal>
+            <Dependent Role="Repository">
+              <PropertyRef Name="Department" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Device_Employee">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+          <End Role="Device" Type="Self.Device" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="Employee_ID" />
+            </Principal>
+            <Dependent Role="Device">
+              <PropertyRef Name="Employee_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employee_Meal_Plan">
+          <End Role="Meal_Plan" Type="Self.Meal_Plan" Multiplicity="1" />
+          <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Meal_Plan">
+              <PropertyRef Name="Meal_Plan_ID" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="MealPlan_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employee_Project">
+          <End Role="Project" Type="Self.Project" Multiplicity="1" />
+          <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Project">
+              <PropertyRef Name="Project_ID" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="Project_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employee_Role">
+          <End Role="Role" Type="Self.Role" Multiplicity="1" />
+          <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Role">
+              <PropertyRef Name="Role_ID" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="Role_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employee_Work_Mode">
+          <End Role="Work_Mode" Type="Self.Work_Mode" Multiplicity="1" />
+          <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Work_Mode">
+              <PropertyRef Name="Mode_ID" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="Mode_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Leaves_Employee">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+          <End Role="Leaves" Type="Self.Leaves" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="Employee_ID" />
+            </Principal>
+            <Dependent Role="Leaves">
+              <PropertyRef Name="Leave_Balance_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Medical_Insurance_Employee">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+          <End Role="Medical_Insurance" Type="Self.Medical_Insurance" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="Employee_ID" />
+            </Principal>
+            <Dependent Role="Medical_Insurance">
+              <PropertyRef Name="Employee" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Parking_Employee">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+          <End Role="Parking" Type="Self.Parking" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="Employee_ID" />
+            </Principal>
+            <Dependent Role="Parking">
+              <PropertyRef Name="Employee" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Payroll_Employee">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+          <End Role="Payroll" Type="Self.Payroll" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="Employee_ID" />
+            </Principal>
+            <Dependent Role="Payroll">
+              <PropertyRef Name="employee" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Pension_Account_Employee">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+          <End Role="Pension_Account" Type="Self.Pension_Account" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="Employee_ID" />
+            </Principal>
+            <Dependent Role="Pension_Account">
+              <PropertyRef Name="employee" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Timesheet_Employee">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+          <End Role="Timesheet" Type="Self.Timesheet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="Employee_ID" />
+            </Principal>
+            <Dependent Role="Timesheet">
+              <PropertyRef Name="employee" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_Employee">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+          <End Role="User" Type="Self.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="Employee_ID" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="employee" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Timesheet_Leaves">
+          <End Role="Leaves" Type="Self.Leaves" Multiplicity="1" />
+          <End Role="Timesheet" Type="Self.Timesheet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Leaves">
+              <PropertyRef Name="Leave_Balance_ID" />
+            </Principal>
+            <Dependent Role="Timesheet">
+              <PropertyRef Name="leave" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Timesheet_Payroll">
+          <End Role="Payroll" Type="Self.Payroll" Multiplicity="1" />
+          <End Role="Timesheet" Type="Self.Timesheet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Payroll">
+              <PropertyRef Name="Payroll_ID" />
+            </Principal>
+            <Dependent Role="Timesheet">
+              <PropertyRef Name="payroll" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Personal_Profile_User">
+          <End Role="User" Type="Self.User" Multiplicity="1" />
+          <End Role="Personal_Profile" Type="Self.Personal_Profile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="User_ID" />
+            </Principal>
+            <Dependent Role="Personal_Profile">
+              <PropertyRef Name="user" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_Room">
+          <End Role="Room" Type="Self.Room" Multiplicity="1" />
+          <End Role="User" Type="Self.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Room">
+              <PropertyRef Name="Room_ID" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="Room_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Emp_2_Ktdoc">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+          <End Role="KT_Documents" Type="Self.KT_Documents" Multiplicity="*" />
+        </Association>
+        <Association Name="Emp_2_Skill">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+          <End Role="Skillset" Type="Self.Skillset" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="FDBProjectEntities3" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Admin" EntityType="Self.Admin" />
+          <EntitySet Name="Awards" EntityType="Self.Awards" />
+          <EntitySet Name="Branch" EntityType="Self.Branch" />
+          <EntitySet Name="Building" EntityType="Self.Building" />
+          <EntitySet Name="Client" EntityType="Self.Client" />
+          <EntitySet Name="Department" EntityType="Self.Department" />
+          <EntitySet Name="Device" EntityType="Self.Device" />
+          <EntitySet Name="Employee" EntityType="Self.Employee" />
+          <EntitySet Name="KT_Documents" EntityType="Self.KT_Documents" />
+          <EntitySet Name="Leaves" EntityType="Self.Leaves" />
+          <EntitySet Name="Meal_Plan" EntityType="Self.Meal_Plan" />
+          <EntitySet Name="Medical_Insurance" EntityType="Self.Medical_Insurance" />
+          <EntitySet Name="Parking" EntityType="Self.Parking" />
+          <EntitySet Name="Payroll" EntityType="Self.Payroll" />
+          <EntitySet Name="Pension_Account" EntityType="Self.Pension_Account" />
+          <EntitySet Name="Personal_Profile" EntityType="Self.Personal_Profile" />
+          <EntitySet Name="Project" EntityType="Self.Project" />
+          <EntitySet Name="Repository" EntityType="Self.Repository" />
+          <EntitySet Name="Role" EntityType="Self.Role" />
+          <EntitySet Name="Room" EntityType="Self.Room" />
+          <EntitySet Name="Skillset" EntityType="Self.Skillset" />
+          <EntitySet Name="Timesheet" EntityType="Self.Timesheet" />
+          <EntitySet Name="User" EntityType="Self.User" />
+          <EntitySet Name="Work_Mode" EntityType="Self.Work_Mode" />
+          <AssociationSet Name="FK_Admin_User" Association="Self.FK_Admin_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="Admin" EntitySet="Admin" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Awards_Employee" Association="Self.FK_Awards_Employee">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="Awards" EntitySet="Awards" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Building_Branch" Association="Self.FK_Building_Branch">
+            <End Role="Branch" EntitySet="Branch" />
+            <End Role="Building" EntitySet="Building" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Department_Building" Association="Self.FK_Department_Building">
+            <End Role="Building" EntitySet="Building" />
+            <End Role="Department" EntitySet="Department" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Room_Building" Association="Self.FK_Room_Building">
+            <End Role="Building" EntitySet="Building" />
+            <End Role="Room" EntitySet="Room" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Project_Client" Association="Self.FK_Project_Client">
+            <End Role="Client" EntitySet="Client" />
+            <End Role="Project" EntitySet="Project" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Project_Department" Association="Self.FK_Project_Department">
+            <End Role="Department" EntitySet="Department" />
+            <End Role="Project" EntitySet="Project" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Repository_Department" Association="Self.FK_Repository_Department">
+            <End Role="Department" EntitySet="Department" />
+            <End Role="Repository" EntitySet="Repository" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Device_Employee" Association="Self.FK_Device_Employee">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="Device" EntitySet="Device" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employee_Meal_Plan" Association="Self.FK_Employee_Meal_Plan">
+            <End Role="Meal_Plan" EntitySet="Meal_Plan" />
+            <End Role="Employee" EntitySet="Employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employee_Project" Association="Self.FK_Employee_Project">
+            <End Role="Project" EntitySet="Project" />
+            <End Role="Employee" EntitySet="Employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employee_Role" Association="Self.FK_Employee_Role">
+            <End Role="Role" EntitySet="Role" />
+            <End Role="Employee" EntitySet="Employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employee_Work_Mode" Association="Self.FK_Employee_Work_Mode">
+            <End Role="Work_Mode" EntitySet="Work_Mode" />
+            <End Role="Employee" EntitySet="Employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Leaves_Employee" Association="Self.FK_Leaves_Employee">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="Leaves" EntitySet="Leaves" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Medical_Insurance_Employee" Association="Self.FK_Medical_Insurance_Employee">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="Medical_Insurance" EntitySet="Medical_Insurance" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Parking_Employee" Association="Self.FK_Parking_Employee">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="Parking" EntitySet="Parking" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Payroll_Employee" Association="Self.FK_Payroll_Employee">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="Payroll" EntitySet="Payroll" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pension_Account_Employee" Association="Self.FK_Pension_Account_Employee">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="Pension_Account" EntitySet="Pension_Account" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Timesheet_Employee" Association="Self.FK_Timesheet_Employee">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="Timesheet" EntitySet="Timesheet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_Employee" Association="Self.FK_User_Employee">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Timesheet_Leaves" Association="Self.FK_Timesheet_Leaves">
+            <End Role="Leaves" EntitySet="Leaves" />
+            <End Role="Timesheet" EntitySet="Timesheet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Timesheet_Payroll" Association="Self.FK_Timesheet_Payroll">
+            <End Role="Payroll" EntitySet="Payroll" />
+            <End Role="Timesheet" EntitySet="Timesheet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Personal_Profile_User" Association="Self.FK_Personal_Profile_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="Personal_Profile" EntitySet="Personal_Profile" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_Room" Association="Self.FK_User_Room">
+            <End Role="Room" EntitySet="Room" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+          <AssociationSet Name="Emp_2_Ktdoc" Association="Self.Emp_2_Ktdoc">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="KT_Documents" EntitySet="KT_Documents" />
+          </AssociationSet>
+          <AssociationSet Name="Emp_2_Skill" Association="Self.Emp_2_Skill">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="Skillset" EntitySet="Skillset" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="FDBProjectModelStoreContainer" CdmEntityContainer="FDBProjectEntities3">
+          <EntitySetMapping Name="Admin">
+            <EntityTypeMapping TypeName="FDBProjectModel.Admin">
+              <MappingFragment StoreEntitySet="Admin">
+                <ScalarProperty Name="Admin_ID" ColumnName="Admin_ID" />
+                <ScalarProperty Name="Admin_First_Name" ColumnName="Admin_First_Name" />
+                <ScalarProperty Name="Admin_Last_Name" ColumnName="Admin_Last_Name" />
+                <ScalarProperty Name="Contact_Phone" ColumnName="Contact_Phone" />
+                <ScalarProperty Name="Contact_Mail" ColumnName="Contact_Mail" />
+                <ScalarProperty Name="user" ColumnName="user" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Awards">
+            <EntityTypeMapping TypeName="FDBProjectModel.Awards">
+              <MappingFragment StoreEntitySet="Awards">
+                <ScalarProperty Name="Award_ID" ColumnName="Award_ID" />
+                <ScalarProperty Name="Award_Name" ColumnName="Award_Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Employee_ID" ColumnName="Employee_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Branch">
+            <EntityTypeMapping TypeName="FDBProjectModel.Branch">
+              <MappingFragment StoreEntitySet="Branch">
+                <ScalarProperty Name="Branch_ID" ColumnName="Branch_ID" />
+                <ScalarProperty Name="Branch_Name" ColumnName="Branch_Name" />
+                <ScalarProperty Name="Branch_Location" ColumnName="Branch_Location" />
+                <ScalarProperty Name="No_Of_Buildings" ColumnName="No_Of_Buildings" />
+                <ScalarProperty Name="Zip_Code" ColumnName="Zip_Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Building">
+            <EntityTypeMapping TypeName="FDBProjectModel.Building">
+              <MappingFragment StoreEntitySet="Building">
+                <ScalarProperty Name="Building_ID" ColumnName="Building_ID" />
+                <ScalarProperty Name="Building_Name" ColumnName="Building_Name" />
+                <ScalarProperty Name="No_Of_Floors" ColumnName="No_Of_Floors" />
+                <ScalarProperty Name="No_Of_Rooms" ColumnName="No_Of_Rooms" />
+                <ScalarProperty Name="Branch_ID" ColumnName="Branch_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Client">
+            <EntityTypeMapping TypeName="FDBProjectModel.Client">
+              <MappingFragment StoreEntitySet="Client">
+                <ScalarProperty Name="Client_ID" ColumnName="Client_ID" />
+                <ScalarProperty Name="Client_Name" ColumnName="Client_Name" />
+                <ScalarProperty Name="Client_Email" ColumnName="Client_Email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Department">
+            <EntityTypeMapping TypeName="FDBProjectModel.Department">
+              <MappingFragment StoreEntitySet="Department">
+                <ScalarProperty Name="Department_ID" ColumnName="Department_ID" />
+                <ScalarProperty Name="Head" ColumnName="Head" />
+                <ScalarProperty Name="Buddy_System" ColumnName="Buddy_System" />
+                <ScalarProperty Name="Company_News" ColumnName="Company_News" />
+                <ScalarProperty Name="Building_ID" ColumnName="Building_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Device">
+            <EntityTypeMapping TypeName="FDBProjectModel.Device">
+              <MappingFragment StoreEntitySet="Device">
+                <ScalarProperty Name="Device_ID" ColumnName="Device_ID" />
+                <ScalarProperty Name="Device_Name" ColumnName="Device_Name" />
+                <ScalarProperty Name="Device_Type" ColumnName="Device_Type" />
+                <ScalarProperty Name="Date_Taken" ColumnName="Date_Taken" />
+                <ScalarProperty Name="Employee_ID" ColumnName="Employee_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Employee">
+            <EntityTypeMapping TypeName="FDBProjectModel.Employee">
+              <MappingFragment StoreEntitySet="Employee">
+                <ScalarProperty Name="Employee_ID" ColumnName="Employee_ID" />
+                <ScalarProperty Name="Employee_First_Name" ColumnName="Employee_First_Name" />
+                <ScalarProperty Name="Employee_Last_Name" ColumnName="Employee_Last_Name" />
+                <ScalarProperty Name="Designation_ID" ColumnName="Designation_ID" />
+                <ScalarProperty Name="Company_Email" ColumnName="Company_Email" />
+                <ScalarProperty Name="Company_Phone" ColumnName="Company_Phone" />
+                <ScalarProperty Name="Employee_Start_Date" ColumnName="Employee_Start_Date" />
+                <ScalarProperty Name="Mode_ID" ColumnName="Mode_ID" />
+                <ScalarProperty Name="Project_ID" ColumnName="Project_ID" />
+                <ScalarProperty Name="Role_ID" ColumnName="Role_ID" />
+                <ScalarProperty Name="MealPlan_ID" ColumnName="MealPlan_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KT_Documents">
+            <EntityTypeMapping TypeName="FDBProjectModel.KT_Documents">
+              <MappingFragment StoreEntitySet="KT_Documents">
+                <ScalarProperty Name="KT_ID" ColumnName="KT_ID" />
+                <ScalarProperty Name="KT_Name" ColumnName="KT_Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Leaves">
+            <EntityTypeMapping TypeName="FDBProjectModel.Leaves">
+              <MappingFragment StoreEntitySet="Leaves">
+                <ScalarProperty Name="Leave_Balance_ID" ColumnName="Leave_Balance_ID" />
+                <ScalarProperty Name="Leave_Type" ColumnName="Leave_Type" />
+                <ScalarProperty Name="Assigned_Leaves" ColumnName="Assigned_Leaves" />
+                <ScalarProperty Name="Leaves_Taken_In_Month" ColumnName="Leaves_Taken_In_Month" />
+                <ScalarProperty Name="employee" ColumnName="employee" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Meal_Plan">
+            <EntityTypeMapping TypeName="FDBProjectModel.Meal_Plan">
+              <MappingFragment StoreEntitySet="Meal_Plan">
+                <ScalarProperty Name="Meal_Plan_ID" ColumnName="Meal_Plan_ID" />
+                <ScalarProperty Name="Meal_Plan_Name" ColumnName="Meal_Plan_Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Medical_Insurance">
+            <EntityTypeMapping TypeName="FDBProjectModel.Medical_Insurance">
+              <MappingFragment StoreEntitySet="Medical_Insurance">
+                <ScalarProperty Name="Insurance_ID" ColumnName="Insurance_ID" />
+                <ScalarProperty Name="Insurance_Name" ColumnName="Insurance_Name" />
+                <ScalarProperty Name="Insurance_Type" ColumnName="Insurance_Type" />
+                <ScalarProperty Name="Coverage_Limit" ColumnName="Coverage_Limit" />
+                <ScalarProperty Name="Employee" ColumnName="Employee" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Parking">
+            <EntityTypeMapping TypeName="FDBProjectModel.Parking">
+              <MappingFragment StoreEntitySet="Parking">
+                <ScalarProperty Name="Parking_Lot_ID" ColumnName="Parking_Lot_ID" />
+                <ScalarProperty Name="Lot_Capacity" ColumnName="Lot_Capacity" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Employee" ColumnName="Employee" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Payroll">
+            <EntityTypeMapping TypeName="FDBProjectModel.Payroll">
+              <MappingFragment StoreEntitySet="Payroll">
+                <ScalarProperty Name="Payroll_ID" ColumnName="Payroll_ID" />
+                <ScalarProperty Name="Payroll_Type" ColumnName="Payroll_Type" />
+                <ScalarProperty Name="employee" ColumnName="employee" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pension_Account">
+            <EntityTypeMapping TypeName="FDBProjectModel.Pension_Account">
+              <MappingFragment StoreEntitySet="Pension_Account">
+                <ScalarProperty Name="Pension_Account_ID" ColumnName="Pension_Account_ID" />
+                <ScalarProperty Name="Holder_Name" ColumnName="Holder_Name" />
+                <ScalarProperty Name="Nominees" ColumnName="Nominees" />
+                <ScalarProperty Name="employee" ColumnName="employee" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Personal_Profile">
+            <EntityTypeMapping TypeName="FDBProjectModel.Personal_Profile">
+              <MappingFragment StoreEntitySet="Personal_Profile">
+                <ScalarProperty Name="Profile_ID" ColumnName="Profile_ID" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="SSN" ColumnName="SSN" />
+                <ScalarProperty Name="Personal_gmail" ColumnName="Personal_gmail" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="user" ColumnName="user" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Project">
+            <EntityTypeMapping TypeName="FDBProjectModel.Project">
+              <MappingFragment StoreEntitySet="Project">
+                <ScalarProperty Name="Project_ID" ColumnName="Project_ID" />
+                <ScalarProperty Name="Project_Name" ColumnName="Project_Name" />
+                <ScalarProperty Name="Project_Budget" ColumnName="Project_Budget" />
+                <ScalarProperty Name="Project_Members" ColumnName="Project_Members" />
+                <ScalarProperty Name="Project_Start_Date" ColumnName="Project_Start_Date" />
+                <ScalarProperty Name="Project_End_Date" ColumnName="Project_End_Date" />
+                <ScalarProperty Name="Client_ID" ColumnName="Client_ID" />
+                <ScalarProperty Name="Department_ID" ColumnName="Department_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Repository">
+            <EntityTypeMapping TypeName="FDBProjectModel.Repository">
+              <MappingFragment StoreEntitySet="Repository">
+                <ScalarProperty Name="Repository_ID" ColumnName="Repository_ID" />
+                <ScalarProperty Name="Storage_Available" ColumnName="Storage_Available" />
+                <ScalarProperty Name="Department" ColumnName="Department" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Role">
+            <EntityTypeMapping TypeName="FDBProjectModel.Role">
+              <MappingFragment StoreEntitySet="Role">
+                <ScalarProperty Name="Role_ID" ColumnName="Role_ID" />
+                <ScalarProperty Name="Role_Type" ColumnName="Role_Type" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Room">
+            <EntityTypeMapping TypeName="FDBProjectModel.Room">
+              <MappingFragment StoreEntitySet="Room">
+                <ScalarProperty Name="Room_ID" ColumnName="Room_ID" />
+                <ScalarProperty Name="Room_No" ColumnName="Room_No" />
+                <ScalarProperty Name="Room_Capacity" ColumnName="Room_Capacity" />
+                <ScalarProperty Name="Building_ID" ColumnName="Building_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Skillset">
+            <EntityTypeMapping TypeName="FDBProjectModel.Skillset">
+              <MappingFragment StoreEntitySet="Skillset">
+                <ScalarProperty Name="Skill_ID" ColumnName="Skill_ID" />
+                <ScalarProperty Name="Skill_Name" ColumnName="Skill_Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Timesheet">
+            <EntityTypeMapping TypeName="FDBProjectModel.Timesheet">
+              <MappingFragment StoreEntitySet="Timesheet">
+                <ScalarProperty Name="Timesheet_ID" ColumnName="Timesheet_ID" />
+                <ScalarProperty Name="Total_Working_Hours_Per_Month" ColumnName="Total_Working_Hours_Per_Month" />
+                <ScalarProperty Name="Week_Number" ColumnName="Week_Number" />
+                <ScalarProperty Name="employee" ColumnName="employee" />
+                <ScalarProperty Name="leave" ColumnName="leave" />
+                <ScalarProperty Name="payroll" ColumnName="payroll" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="User">
+            <EntityTypeMapping TypeName="FDBProjectModel.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Room_ID" ColumnName="Room_ID" />
+                <ScalarProperty Name="employee" ColumnName="employee" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Work_Mode">
+            <EntityTypeMapping TypeName="FDBProjectModel.Work_Mode">
+              <MappingFragment StoreEntitySet="Work_Mode">
+                <ScalarProperty Name="Mode_ID" ColumnName="Mode_ID" />
+                <ScalarProperty Name="Mode_Name" ColumnName="Mode_Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="Emp_2_Ktdoc" TypeName="FDBProjectModel.Emp_2_Ktdoc" StoreEntitySet="Emp_2_Ktdoc">
+            <EndProperty Name="Employee">
+              <ScalarProperty Name="Employee_ID" ColumnName="empid" />
+            </EndProperty>
+            <EndProperty Name="KT_Documents">
+              <ScalarProperty Name="KT_ID" ColumnName="docid" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="Emp_2_Skill" TypeName="FDBProjectModel.Emp_2_Skill" StoreEntitySet="Emp_2_Skill">
+            <EndProperty Name="Employee">
+              <ScalarProperty Name="Employee_ID" ColumnName="empid" />
+            </EndProperty>
+            <EndProperty Name="Skillset">
+              <ScalarProperty Name="Skill_ID" ColumnName="skillid" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
